@@ -1,0 +1,18 @@
+<div class='container'>
+  <div class='card'>
+  <div class='card-head text-center alert-primary'>
+    <h2>Counter App</h2>
+  </div>
+  <div class='card card-body text-center'>  
+    <span>  
+    +10 <app-counter [btnClickValue]=btnClick [calcValue]=btn10 [lastCountValue]=countFromChild (countValueTotal)='assignValue($event)'></app-counter>
+    +20 <app-counter [btnClickValue]=btnClick [calcValue]=btn20 [lastCountValue]=countFromChild (countValueTotal)='assignValue($event)'></app-counter>
+    -5 <app-counter [btnClickValue]=btnClick [calcValue]=btnM5 [lastCountValue]=countFromChild (countValueTotal)='assignValue($event)'></app-counter>
+    -10 <app-counter [btnClickValue]=btnClick [calcValue]=btnM10 [lastCountValue]=countFromChild (countValueTotal)='assignValue($event)'></app-counter>
+    </span>
+  </div>
+  <div class='card card-foter text-center alert-info'>
+    <h4>Total Count: <span class='badge badge-danger'>{{countFromChild}}</span></h4>
+  </div>
+  </div>
+</div>
